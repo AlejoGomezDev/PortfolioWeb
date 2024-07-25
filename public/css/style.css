@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root
+{
+    /*-----------COLORS-----------*/
+    /* Backgrounds */
+    --mainBackgroundColor: #0F0F18;
+    --secondaryBackgroundColor:#171723 ;
+    /*Buttons & others*/
+    --terciaryColor:#2E2E43 ;
+    /*Font colors*/
+    --primaryFontColor:#E2E2E2 ;
+    --emphasisFontColor: #2F8C78;
+    /*--------FONT STYLES---------*/
+    /*--------FONT SIZES----------*/
+    /*--------FONT WEIGHTS--------*/
+}
+body
+{
+    background-color: var(--mainBackgroundColor);
+}
+.mainSection
+{
+    background-color: red;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+.personalData
+{
+    background-color: blue;
+    width: 50%;
+    padding-top: 5em;
+    text-wrap: balance;
+}
+.personalImage
+{
+background-color: violet;
+width: 50%;
+}
+.dataText
+{
+    margin: 0 auto;
+    width: 80%;
+    background-color: orange;
+}
+.socialLinks
+{
+    margin: 2em auto;
+    width: 80%;
+    background-color: orange;
+}
