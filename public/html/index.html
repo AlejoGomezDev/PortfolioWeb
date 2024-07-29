@@ -1,46 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Alejo Gomez | Portfolio</title>
 </head>
+
 <body>
+    <!--NAV-->
     <header>
-        <div class="container">
+        <nav class="nav">
             <div class="logo">
-              <h1>ALEJO GOMEZ</h1>
+                <h1>AG</h1>
             </div>
-            <nav class="nav">
-                <ul>
-                    <li>CASA</li>
-                </ul>
-            </nav>
-        </div>
+            <ul>
+                <li> <a href="#mainSection">Home</a></li>
+                <li><a href="#projectSection">Proyectos</a></li>
+                <li><a href="#">Habilidades</a></li>
+                <li><a href="">Sobre mí</a></li>
+                <li><a href="">Formación</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
+    <!--MAIN-->
     <main>
-        <section class="mainSection">
+        <section class="mainSection" id="mainSection">
             <div class="personalData">
                 <div class="dataText">
-                <h2>Hola! soy</h2>
-                <h1 class="name"><span class="emphasis">A</span>lejo <span class="emphasis">G</span>omez</h1>
-                <h2>Programador</h2>
-                <p>Como estudiante universitario de <span class="emphasis">Programación</span> y <span class="emphasis"> Sistemas Informaticos</span>,
-                 estoy en constante aprendizaje y siempre buscando nuevos desafios para incorporar y aplicar mis conocimientos.</p>
+                    <h2 id="hello">Hola! soy</h2>
+                    <h1 id="name"><span class="emphasis">A</span>lejo <span class="emphasis">G</span>omez</h1>
+                    <h2 id="programer">Programador</h2>
+                    <p id="dataP">Como estudiante universitario de <span class="emphasis">Programación</span> y <span
+                            class="emphasis"> Sistemas Informaticos</span>,
+                        estoy en constante aprendizaje y siempre buscando nuevos desafios para incorporar y aplicar mis
+                        conocimientos.</p>
                 </div>
                 <div class="socialLinks">
-                    <a href="">LinkedIN</a>
-                    <a href="">GitHub</a>
+                    <a href="" class="buttonSocialMedia">LinkedIN</a>
+                    <a href="" class="buttonSocialMedia">GitHub</a>
                 </div>
             </div>
             <div class="personalImage">
                 <img src="https://icones.pro/wp-content/uploads/2021/04/icone-cercle-bleu.png" alt="">
             </div>
         </section>
+        <!--SVG-->
+        <section class="svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#2E2E43" fill-opacity="1"
+                    d="M0,32L48,69.3C96,107,192,181,288,202.7C384,224,480,192,576,160C672,128,768,96,864,106.7C960,117,1056,171,1152,186.7C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+        </section>
+        <!--PROYECTOS-->
+        <section class="projectSection" id="projectSection">
+            <H1 id="myprojects">Mis <span class="emphasis">Proyectos</span></H1>
+            <div class="projectContainer">
+                <!--PROJECT 1-->
+                <div class="projectDiv">
+                    <div class="projectImg">
+                        <img src="../images/TheCD.png" alt="The Chained Dungeon Image" class="cardImage">
+                    </div>
+                    <!--CARD-->
+                    <div class="flipCard" id="flipCard">
+                        <div class="flipCard-inner">
+                            <div class="front">
+                                <h2 class="backTitle">The Chained Dungeon</h2>
+                                <div class="frontContent">
+                                    <p>Juego de aventuras inspirado en mazmorras. El objetivo es recorrer el mapa y
+                                        eliminar a los enemigos que se interpongan en tu camino para poder escapar</p>
+                                    <p>Cuenta con distintos tipos de enemigos, items y niveles basados en XP</p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <h3 class="backH3">Desarrollado con: </h3>
+                                <ul class="backUL">
+                                    <li>C++</li>
+                                    <li>SFML</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!--PROJECT 2-->
+                <div class="projectDiv">
+                    <div class="projectImg">
+                        <img src="../images/CodeFlix.png" alt="CodeFlix Image" class="cardImage">
+                    </div>
+                    <!--CARD-->
+                    <div class="flipCard" id="flipCard">
+                        <div class="flipCard-inner">
+                            <div class="front">
+                                <h2 class="backTitle">CodeFlix</h2>
+                                <div class="frontContent">
+                                    <p>Sitio web de una Biblioteca de películas.</p>
+                                    <p>Mediante el consumo de una API se obtienen las películas y se las divide por
+                                        género.
+                                    </p>
+                                    <p>Está conectada a una base de datos donde se recopila la información de cada
+                                        película
+                                        y se guardan los datos de los usuarios.</p>
+                                    <p>Cuenta con un sistema de início de sesión y de comentarios.</p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <h3 class="backH3">Desarrollado con: </h3>
+                                <ul class="backUL">
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>JavaScript</li>
+                                    <li>MySQL</li>
+                                    <li>Node.JS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!--PROJECT 3-->
+                <div class="projectDiv">
+                    <div class="projectImg">
+                        <img src="../images/BurgerCode.png" alt="Burguer::Code Image" class="cardImage">
+                    </div>
+                    <!--CARD-->
+                    <div class="flipCard" id="flipCard">
+                        <div class="flipCard-inner">
+                            <div class="front">
+                                <h2 class="backTitle">Burguer::Code</h2>
+                                <div class="frontContent">
+                                    <p>Sitio web de una Hamburgueseria.</p>
+                                    <p>Mayormente basada en el diseño y el impacto visual. Permite la navegación en el menú, la visualización de las sucursales y un formulario para
+                                    postularte al trabajo</p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <h3 class="backH3">Desarrollado con: </h3>
+                                <ul class="backUL">
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>JavaScript</li>
+                                    <li>Bootstrap</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!--HABILIDADES-->
     </main>
     <footer>
     </footer>
     <script src="../js/script.js"></script>
 </body>
+
 </html>
