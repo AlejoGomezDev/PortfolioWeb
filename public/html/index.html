@@ -19,10 +19,10 @@
                 <h1>AG</h1>
             </div>
             <ul>
-                <li> <a href="#mainSection">Home</a></li>
-                <li><a href="#projectSection">Proyectos</a></li>
-                <li><a href="#">Habilidades</a></li>
-                <li><a href="">Sobre mí</a></li>
+                <li> <a href="#Section1">Home</a></li>
+                <li><a href="#Section3">Proyectos</a></li>
+                <li><a href="#Section4">Habilidades</a></li>
+                <li><a href="#Section5">Sobre mí</a></li>
                 <li><a href="">Formación</a></li>
                 <li><a href="">Contacto</a></li>
             </ul>
@@ -30,7 +30,7 @@
     </header>
     <!--MAIN-->
     <main>
-        <section class="mainSection" id="mainSection">
+        <section class="Section1" id="Section1">
             <div class="personalData">
                 <div class="dataText">
                     <h2 id="hello">Hola! soy</h2>
@@ -42,8 +42,13 @@
                         conocimientos.</p>
                 </div>
                 <div class="socialLinks">
-                    <a href="" class="buttonSocialMedia">LinkedIN</a>
-                    <a href="" class="buttonSocialMedia">GitHub</a>
+                    <a href="https://www.linkedin.com/in/alejo-gomez-484217266/" target="blank"
+                        class="buttonSocialMedia">
+                        <img src="../images/logos/linkedIN.svg" alt="">
+                    </a>
+                    <a href="https://github.com/KaliWick" target="_blank" class="buttonSocialMedia">
+                        <img src="../images/logos/github.png" alt="">
+                    </a>
                 </div>
             </div>
             <div class="personalImage">
@@ -51,7 +56,7 @@
             </div>
         </section>
         <!--SVG-->
-        <section class="svg">
+        <section class="Section2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#2E2E43" fill-opacity="1"
                     d="M0,32L48,69.3C96,107,192,181,288,202.7C384,224,480,192,576,160C672,128,768,96,864,106.7C960,117,1056,171,1152,186.7C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -59,102 +64,120 @@
             </svg>
         </section>
         <!--PROYECTOS-->
-        <section class="projectSection" id="projectSection">
-            <H1 id="myprojects">Mis <span class="emphasis">Proyectos</span></H1>
-            <div class="projectContainer">
-                <!--PROJECT 1-->
-                <div class="projectDiv">
-                    <div class="projectImg">
-                        <img src="../images/TheCD.png" alt="The Chained Dungeon Image" class="cardImage">
-                    </div>
-                    <!--CARD-->
-                    <div class="flipCard" id="flipCard">
-                        <div class="flipCard-inner">
-                            <div class="front">
-                                <h2 class="backTitle">The Chained Dungeon</h2>
-                                <div class="frontContent">
-                                    <p>Juego de aventuras inspirado en mazmorras. El objetivo es recorrer el mapa y
-                                        eliminar a los enemigos que se interpongan en tu camino para poder escapar</p>
-                                    <p>Cuenta con distintos tipos de enemigos, items y niveles basados en XP</p>
-                                </div>
-                            </div>
-                            <div class="back">
-                                <h3 class="backH3">Desarrollado con: </h3>
-                                <ul class="backUL">
-                                    <li>C++</li>
-                                    <li>SFML</li>
-                                </ul>
-                            </div>
-                        </div>
+        <section class="Section3" id="Section3">
+            <h2 id="myprojects">Mis <span class="emphasis">Proyectos</span></h2>
+            <div class="projectsContainer">
+                <div class="project">
+                    <img src="../images/TheCD.png" alt="The Chained Dungeon" class="projectImage">
+                    <div class="projectData">
+                        <h3>The Chained Dungeon</h3>
+                        <p>Juego de aventuras inspirado en mazmorras. Desarrollé este juego para presentarlo como
+                            proyecto integrador en la universidad.
+                        </p>
+                        <p>Cuenta con distintos tipos de enemigos (normales, mini jefes y jefes finales), items y
+                            niveles basados en XP</p>
+                        <p class="projectP darkEmphasis">C++, SFML</p>
                     </div>
                 </div>
-                <br>
-                <!--PROJECT 2-->
-                <div class="projectDiv">
-                    <div class="projectImg">
-                        <img src="../images/CodeFlix.png" alt="CodeFlix Image" class="cardImage">
-                    </div>
-                    <!--CARD-->
-                    <div class="flipCard" id="flipCard">
-                        <div class="flipCard-inner">
-                            <div class="front">
-                                <h2 class="backTitle">CodeFlix</h2>
-                                <div class="frontContent">
-                                    <p>Sitio web de una Biblioteca de películas.</p>
-                                    <p>Mediante el consumo de una API se obtienen las películas y se las divide por
-                                        género.
-                                    </p>
-                                    <p>Está conectada a una base de datos donde se recopila la información de cada
-                                        película
-                                        y se guardan los datos de los usuarios.</p>
-                                    <p>Cuenta con un sistema de início de sesión y de comentarios.</p>
-                                </div>
-                            </div>
-                            <div class="back">
-                                <h3 class="backH3">Desarrollado con: </h3>
-                                <ul class="backUL">
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                    <li>JavaScript</li>
-                                    <li>MySQL</li>
-                                    <li>Node.JS</li>
-                                </ul>
-                            </div>
-                        </div>
+                <div class="project">
+                    <img src="../images/CodeFlix.png" alt="CodeFlix" class="projectImage">
+                    <div class="projectData">
+                        <h3>CodeFlix</h3>
+                        <p>Página hecha como proyecto final para mi certificación de Web Developer</p>
+                        <p>Mediante el consumo de una API se crea una biblioteca de películas.
+                            Cuenta con sistema de inicio de sesión, comentarios y conexión a base de datos.
+                        </p>
+                        <p class="projectP darkEmphasis">HTML5, CSS3, JavaScript, NodeJS, mySQL, Express</p>
                     </div>
                 </div>
-                <br>
-                <!--PROJECT 3-->
-                <div class="projectDiv">
-                    <div class="projectImg">
-                        <img src="../images/BurgerCode.png" alt="Burguer::Code Image" class="cardImage">
-                    </div>
-                    <!--CARD-->
-                    <div class="flipCard" id="flipCard">
-                        <div class="flipCard-inner">
-                            <div class="front">
-                                <h2 class="backTitle">Burguer::Code</h2>
-                                <div class="frontContent">
-                                    <p>Sitio web de una Hamburgueseria.</p>
-                                    <p>Mayormente basada en el diseño y el impacto visual. Permite la navegación en el menú, la visualización de las sucursales y un formulario para
-                                    postularte al trabajo</p>
-                                </div>
-                            </div>
-                            <div class="back">
-                                <h3 class="backH3">Desarrollado con: </h3>
-                                <ul class="backUL">
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                    <li>JavaScript</li>
-                                    <li>Bootstrap</li>
-                                </ul>
-                            </div>
-                        </div>
+                <div class="project">
+                    <img src="../images/BurgerCode.png" alt="Burger::Code" class="projectImage">
+                    <div class="projectData">
+                        <h3>Burguer::Code</h3>
+                        <p>Sitio web de una Hamburgueseria.</p>
+                        <p>Mayormente basada en el diseño y el impacto visual. Permite la navegación en el menú, la
+                            visualización de las sucursales y un formulario para
+                            postularte al trabajo</p>
+                        <p class="projectP darkEmphasis">HTML5, CSS3, JavaScript, BootStrap </p>
                     </div>
                 </div>
             </div>
         </section>
-    <!--HABILIDADES-->
+        <!--SVG-->
+        <section class="Section2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2E2E43" fill-opacity="1" d="M0,96L48,106.7C96,117,192,139,288,133.3C384,128,480,96,576,90.7C672,85,768,107,864,138.7C960,171,1056,213,1152,218.7C1248,224,1344,192,1392,176L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+        </section>
+        <!--HABILIDADES-->
+        <section class="Section4" id="Section4">
+            <div class="skillContainer">
+                <h2>Habilidades</h2>
+                <div class="buttons">
+                <button class="languageBTN active">Lenguajes</button>
+                <button class="ToolsBTN">Herramientas</button>
+                </div>
+                <div class="lenguajes">
+                    <div class="lenguaje">
+                        <img src="../images/skills/html5.png" alt="" class="skillImage">
+                        <h3 class="skillText">HTML5</h3>
+                    </div>
+                    <div class="lenguaje">
+                        <img src="../images/skills/css3.png" alt="" class="skillImage">
+                        <h3 class="skillText">CSS3</h3>
+                    </div>
+                    <div class="lenguaje">
+                        <img src="../images/skills/js.png" alt="" class="skillImage">
+                        <h3 class="skillText">JavaScript</h3>
+                    </div>
+                    <div class="lenguaje">
+                        <img src="../images/skills/bootstrap.png" alt="" class="skillImage">
+                        <h3 class="skillText">Bootstrap</h3>
+                    </div>
+                    <div class="lenguaje">
+                        <img src="../images/skills/c++.png" alt="" class="skillImage">
+                        <h3 class="skillText">C++</h3>
+                    </div>
+                    <div class="lenguaje">
+                        <img src="../images/skills/sfml.png" alt="" class="skillImage">
+                        <h3 class="skillText">SFML</h3>
+                    </div>
+                    <div class="lenguaje">
+                        <img src="../images/skills/node.png" alt="" class="skillImage">
+                        <h3 class="skillText">NodeJS</h3>
+                    </div>
+                    <div class="lenguaje">
+                        <img src="../images/skills/sql.png" alt="" class="skillImage">
+                        <h3 class="skillText">SQL</h3>
+                    </div>
+                </div>
+                <div class="herramientas">
+                    <div class="herramienta">
+                        <img src="../images/skills/github.png" alt="" class="skillImage">
+                        <h3 class="skillText">GitHub</h3>
+                    </div>
+                    <div class="herramienta">
+                        <img src="../images/skills/mysql.png" alt="" class="skillImage">
+                        <h3 class="skillText">MySQL</h3>
+                    </div>
+                    <div class="herramienta">
+                        <img src="../images/skills/express.png" alt="" class="skillImage">
+                        <h3 class="skillText">Express</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Section5">
+            <h2>Sobre <span class="emphasis">mí</span></h2>
+            <h1>hola</h1>
+            <h1>hola</h1>
+            <h1>hola</h1>
+
+
+            <h1>hola</h1>
+            <h1>hola</h1>
+            <h1>hola</h1>
+        </section>
+        
+
     </main>
     <footer>
     </footer>
