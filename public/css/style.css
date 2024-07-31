@@ -11,8 +11,8 @@
     --opacityBackgroundColor: #171723c7;
     --projectBackgroundColor: #1b1b2b;
     --skillBackgroundColorHover:#212130  ;
-    /*Buttons & others*/
     --terciaryColor:#2E2E43 ;
+    /*Buttons & others*/
     --buttonBackgroundColor:#171723 ;
     --buttonBorderColor:#2E2E43 ;
     --buttonHoverFontColor: ;
@@ -23,11 +23,15 @@
     --darkEmphasisColor:rgba(27, 173, 141, 0.781) ;
     /*--------FONT STYLES---------*/
     --mainFont: "Oxygen", sans-serif;
+    --secondaryFont:"Zain", sans-serif;
     /*--------FONT SIZES----------*/
     --fontSizeXL: 4em;
     --fontSizeL: 3em;
     --fontSizeM: 2em;
-    --fontSizeS: 1.3em;
+    --fontSizeS: 1.6em;
+    --fontSizeXS: 1em;
+    --fontSizeH3: 1em; 
+    --fontSizeP: .7em;
     /*--------FONT WEIGHTS--------*/
     /*--------MARGIN BOTTOM-------*/
     --marginBottom: 1em;
@@ -36,6 +40,8 @@
     /*-----------CARDS-------------*/
     --cardWidth: 100%;
     --cardHeight: 18em;
+    /*-----BORDER RADIUS----------*/
+    --border-radius: .4em;
 }
 body
 {
@@ -68,29 +74,34 @@ header
 /*--------NAV--------*/
 .nav ul
 {
-    justify-content: space-between;
     list-style: none; 
     display: flex;
-    float: right;
     width: 60%;
-    margin: 0 auto;
     padding: 0;
     text-decoration: none;
     height: 100%;
-    border-bottom: 0.1em solid transparent;
+    margin: 0 0 0 auto;
+    text-align: center;
 }
 .nav ul li
 {
     display: flex;
-    align-items: center; 
     border-bottom: 0.1em solid transparent;
     transition: border-bottom 0.4s; 
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    
 }
 .nav ul li a {
+    height: 100%;
+    width: 100%;
     text-decoration: none;
     color: var(--primaryFontColor);
     display: inline-block;
     transition: color 0.4s;
+    align-content: center;
+    
 }
 
 .nav ul li:hover a{
@@ -187,7 +198,7 @@ width: 50%;
    font-size: var(--fontSizeM); 
    margin-top: -1em;
    text-align: center;
-  margin-bottom: 0em;
+margin-bottom: -.5em;
 }
 #myprojects
 {
@@ -205,7 +216,7 @@ width: 50%;
 }
 .project{
     background-color: var(--projectBackgroundColor);
-    border-radius: .4em;
+    border-radius: var(--border-radius);
     transition: 0.4s;
     filter: brightness(80%);
     padding: .5em;
@@ -217,26 +228,26 @@ width: 50%;
 }
 .projectImage
 {
-    border-radius: .4em;
+    border-radius: var(--border-radius);
     width: 100%;
     height: 8.2em;
 }
 .projectData
 {
     text-align: left;
-    font-size: .7em;
+    font-size: var(--fontSizeP);
     font-weight: 200;
 }
 .projectData h3
 {
     text-align: center;
-    font-size: 1em;
+    font-size: var(--fontSizeH3);
     margin-bottom: .5em;
 }
 .projectP
 {
     font-weight: 800;
-    font-size: .8em;
+    font-size: var(--fontSizeP);
     margin-top: 3em;
 }
 .darkEmphasis
@@ -255,13 +266,17 @@ width: 50%;
 }
 .skillContainer
 {
-    width: 80%;
+    width: 82%;
     margin: 0 auto;
+}
+.skillContainer h2
+{
+    margin-bottom: .7em;
 }
 .lenguajes , .herramientas
 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     width: 100%;
     margin: auto;
@@ -270,15 +285,15 @@ width: 50%;
 }
 .lenguaje, .herramienta
 {
-    border: 0.01em solid var(--darkEmphasisColor);
+    border: 0.01em solid var(--terciaryColor);
+    background-color: var(--buttonBackgroundColor);
     display: flex;
-    text-align: center;
-    align-items: center;
+    align-content: center;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 15% 75%;
     grid-template-rows: 1fr;
     padding: .5em;
-    border-radius: .1em;
+    border-radius: var(--border-radius);
     height: 1em;
 }
 .skillImage
@@ -286,19 +301,20 @@ width: 50%;
     width: 1em;
     height: auto;
     transition: 0.4s;
-    margin-right: .5em;
 }
 .skillText
 {
-    font-size: .6em;
+    font-size: var(--fontSizeP);
     transition: .4s;
-    text-align: left;
+    text-align: center;
+    margin: 0 auto;
+    align-content: center;
 }
 .lenguaje:hover img,.herramienta:hover img
 {
     transform : scale(1.2);
 }
-.lenguaje:hover h3, .herramienta:hover h3
+.lenguaje:hover p, .herramienta:hover p
 {
     margin-top: -1em;
 }
@@ -315,19 +331,165 @@ width: 50%;
    justify-content: flex-start;
 }
 .languageBTN, .ToolsBTN {
+    font-size: .6em;
     margin: 0 .5em;
     padding: 1em;
     border: none;
-    background-color: var(--skillBackgroundColorHover);
-    color: #fff;
+    background-color: transparent;
+    color: var(--primaryFontColor);
     cursor: pointer;
-    border-radius: .3em;
+    border-radius: var(--border-radius);
     transition: background-color 0.3s ease;
+    font-weight: 600;
+    margin-bottom: 1em;
 }
 
 .languageBTN:hover, .ToolsBTN:hover{
     background-color: var(--buttonHoverBGColor);
 }
 .languageBTN.active, .ToolsBTN.active {
-    background-color: var(--buttonHoverBGColor);
+    background-color: var(--skillBackgroundColorHover);
+}
+/*-----SOBRE MI-----*/
+#Section5
+{
+    margin-top: 8em;
+    text-align: center;
+    color: var(--primaryFontColor);
+    font-size: var(--fontSizeM);
+    padding-bottom: 4em;
+}
+#Section5 h2
+{
+    margin-bottom: .7em;
+}
+.aboutContainer
+{
+    font-size:var(--fontSizeP);
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    background-color: var(--terciaryColor);
+    border-radius: var(--border-radius);
+    padding: 2em;
+}
+.aboutImage
+{
+    align-content: center;
+}
+.aboutImage img
+{
+    width: 90%;
+    margin: 0 auto;
+    transition: .4s;
+}
+.aboutImage img:hover
+{
+    box-shadow: 0 0 0.1em var(--emphasisFontColor);
+}
+.aboutText
+{
+    text-align: left;
+    align-content: center;
+    font-weight: 200;
+    text-wrap: balance;
+}
+.buttonCV
+{
+    padding: .5em;
+    font-size: .9em;
+    border-radius: 3em;
+    background-color: var(--projectBackgroundColor);
+    color: var(--primaryFontColor);
+    cursor: pointer;
+    transition: .4s;
+    text-decoration: none;
+}
+.buttonCV:hover
+{
+    box-shadow: 0 0 0.3em var(--emphasisFontColor);
+}
+/*----CONTACTO----*/
+#Section6
+{
+    color: var(--primaryFontColor);
+    text-align: center;
+    font-size: var(--fontSizeM);
+    margin: 0 auto;
+    padding-bottom: 4em;
+}
+#Section6 h2
+{
+    margin-bottom: 1em;
+}
+.contactContainer
+{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr;
+    width: 92%;
+    margin: 0 auto;
+    border: 0.01em solid var(--terciaryColor);
+    border-radius: var(--border-radius);
+    height: auto;
+}
+.contactImage
+{
+    width: 75%;
+    margin: auto;
+    padding: 1em;
+}
+.socialMediaContainer
+{
+    width: 100%;
+    margin: auto;
+}
+.socialMedia
+{
+    border: 0.01em solid var(--terciaryColor);
+    border-radius: var(--border-radius);
+    background-color: var(--buttonBackgroundColor);
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 1fr;
+    padding: .2em;
+    margin: 1em;
+    height: 1em;
+    transition: .2s;
+}
+.socialMedia:hover
+{
+    box-shadow: 0 0 0.1em var(--emphasisFontColor);
+}
+.socialMedia img
+{
+    width: 1em;
+    filter: invert(100%);
+    margin-left: .1em;
+}
+.socialMediaText 
+{ 
+    align-content: left; 
+    text-align: left;
+    margin: .09em 0 0 .5em;
+    font-size: var(--fontSizeP);
+}
+.socialMedia a
+{
+    text-decoration: none;
+}
+.detalle
+{
+    color: #0bcaa1;
+    cursor: pointer;
+
+}
+/*---ARREGLO DE FONTS*/
+.zain
+{
+    font-family: var(--secondaryFont);
+    font-weight: 300;
+    font-size: 1.2em;
 }
