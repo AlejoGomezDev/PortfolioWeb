@@ -157,9 +157,23 @@ main{
 {
     font-size: var(--fontSizeL);
 }
-#name
-{
+#name {
     font-size: var(--fontSizeXL);
+    overflow: hidden;
+    border-right: 0.02em solid;
+    white-space: nowrap;
+    overflow: hidden; 
+    animation: typing 3s, cursor .4s step-end infinite alternate; 
+    display: inline-block;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 75% }
+}
+
+@keyframes cursor {
+    50% { border-color: transparent; }
 }
 #programer
 {
@@ -517,7 +531,7 @@ main{
 /* Smartphones */
 @media (max-width: 768px) {
     .nav {
-        margin: 0 auto; /* Centrará el nav horizontalmente */
+        margin: 0 auto;
     }
     .nav ul{
         width: 90%;
@@ -568,13 +582,15 @@ main{
     }
     .project
     {
-        margin: 1em;
+        width: 90%;
+        margin: 0 auto 1em;
     }
     .Section4 {
         display: block;
     }
     .lenguajes, .herramientas {
-        display: block;
+        grid-template-columns: 1fr 1fr;
+        padding: 0em;
     }
     .categoryBtn {
         display: block;
@@ -654,7 +670,7 @@ main{
     }
 }
 
-/* TVs */
+/* TV */
 @media (min-width: 2561px) {
     .projectsContainer {
         grid-template-columns: 1fr 1fr 1fr;
