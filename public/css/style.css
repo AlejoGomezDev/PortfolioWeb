@@ -11,7 +11,7 @@
     --opacityBackgroundColor: #171723c7;
     --projectBackgroundColor: #1b1b2b;
     --skillBackgroundColorHover:#212130  ;
-    --terciaryColor:#2E2E43 ;
+    --terciaryColor:#2e2e43a6 ;
     /*Buttons & others*/
     --buttonBackgroundColor:#171723 ;
     --buttonBorderColor:#2E2E43 ;
@@ -45,8 +45,9 @@
 }
 body
 {
-    background-color: var(--mainBackgroundColor);
     font-family: var(--mainFont);
+    background: rgb(15,15,24);
+    background: linear-gradient(90deg, rgba(15,15,24,1) 0%, rgba(20,19,42,1) 25%, rgba(16,16,40,1) 50%, rgba(20,19,42,1) 75%, rgba(15,15,24,1) 100%);
 }
 header
 {
@@ -70,6 +71,9 @@ header
 {
     color: var(--emphasisFontColor);
     width: 30%;
+}
+.logoImage{
+    width: 3em;
 }
 /*--------NAV--------*/
 .nav ul
@@ -120,23 +124,30 @@ main{
 {
     width: 80%;
     margin: 0 auto;
-    display: flex;
+}
+.personalContainer
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+
 }
 .personalData
 {
-    width: 50%;
+    width: 100%;
     padding-top: 5em;
     text-wrap: balance;
     color: var(--primaryFontColor);
 }
 .personalImage
 {
-width: 50%;
+    width: 100%;
+    margin: auto;
+    text-align: center;
 }
 .dataText
 {
     margin: 0 auto;
-    width: 80%;
 }
 .emphasis
 {
@@ -164,7 +175,6 @@ width: 50%;
 .socialLinks {
     display: flex;
     gap: 1em; 
-    margin:0 auto;
     padding-top: 1em;
     width: 80%;
 }
@@ -183,12 +193,16 @@ width: 50%;
 .buttonSocialMedia:hover {
     transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
 }
-
-/*------SVG-------*/
-.svg
-{
-    margin-top: -2em;
-    margin-bottom: -0.3em;
+/*-----SVG--------*/
+.Section2 {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+.Section2 svg {
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 /*----PROJECTS----*/
 .Section3
@@ -196,13 +210,14 @@ width: 50%;
    background-color: var(--terciaryColor);
    color: var(--primaryFontColor);
    font-size: var(--fontSizeM); 
-   margin-top: -1em;
    text-align: center;
-margin-bottom: -.5em;
+   margin: 0;
+   padding: 0;
 }
 #myprojects
 {
     margin-bottom: .7em;
+    margin-top: 0;
 }
 .projectsContainer
 {
@@ -212,10 +227,11 @@ margin-bottom: -.5em;
     width: 80%;
     margin: auto;
     padding: .5em;
-    grid-gap: .5em;
+    grid-gap: 1.5em;
 }
 .project{
     background-color: var(--projectBackgroundColor);
+    border: 0.01em solid var(--terciaryColor);
     border-radius: var(--border-radius);
     transition: 0.4s;
     filter: brightness(80%);
@@ -224,7 +240,8 @@ margin-bottom: -.5em;
 .project:hover
 {
     scale: 1.02;
-    filter: brightness(100%);
+    filter: brightness(110%);
+    box-shadow: 0 0 0.2em var(--emphasisFontColor);
 }
 .projectImage
 {
@@ -257,7 +274,6 @@ margin-bottom: -.5em;
 /*----HABILIDADES----*/
 .Section4
 {
-    background-color: var(--mainBackgroundColor);
     color: var(--primaryFontColor);
     font-size: var(--fontSizeM);  
     text-align: center;
@@ -266,7 +282,7 @@ margin-bottom: -.5em;
 }
 .skillContainer
 {
-    width: 82%;
+    width: 80%;
     margin: 0 auto;
 }
 .skillContainer h2
@@ -320,8 +336,9 @@ margin-bottom: -.5em;
 }
 .lenguaje:hover,.herramienta:hover
 {
-    box-shadow: 0 0 0.1em var(--emphasisFontColor);
+    box-shadow: 0 0 0.3em var(--emphasisFontColor);
     background-color: var(--skillBackgroundColorHover);
+    filter: brightness(110%);
 }
 .buttons
 {
@@ -353,11 +370,11 @@ margin-bottom: -.5em;
 /*-----SOBRE MI-----*/
 #Section5
 {
-    margin-top: 8em;
     text-align: center;
     color: var(--primaryFontColor);
     font-size: var(--fontSizeM);
-    padding-bottom: 4em;
+    width: 90%;
+    margin:8em auto 4em auto;
 }
 #Section5 h2
 {
@@ -366,14 +383,14 @@ margin-bottom: -.5em;
 .aboutContainer
 {
     font-size:var(--fontSizeP);
-    width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     background-color: var(--terciaryColor);
-    border-radius: var(--border-radius);
-    padding: 2em;
+    border-radius: var(--border-radius);   
+    padding:1em; 
 }
 .aboutImage
 {
@@ -387,7 +404,7 @@ margin-bottom: -.5em;
 }
 .aboutImage img:hover
 {
-    box-shadow: 0 0 0.1em var(--emphasisFontColor);
+    box-shadow: 0 0 0.3em var(--emphasisFontColor);
 }
 .aboutText
 {
@@ -395,6 +412,7 @@ margin-bottom: -.5em;
     align-content: center;
     font-weight: 200;
     text-wrap: balance;
+    margin: auto;
 }
 .buttonCV
 {
@@ -406,6 +424,7 @@ margin-bottom: -.5em;
     cursor: pointer;
     transition: .4s;
     text-decoration: none;
+    display: inline-block;
 }
 .buttonCV:hover
 {
@@ -429,11 +448,12 @@ margin-bottom: -.5em;
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 1fr;
-    width: 92%;
+    width: 90%;
     margin: 0 auto;
     border: 0.01em solid var(--terciaryColor);
     border-radius: var(--border-radius);
     height: auto;
+    background-color: var(--buttonBackgroundColor);
 }
 .contactImage
 {
@@ -461,7 +481,7 @@ margin-bottom: -.5em;
 }
 .socialMedia:hover
 {
-    box-shadow: 0 0 0.1em var(--emphasisFontColor);
+    box-shadow: 0 0 0.3em var(--emphasisFontColor);
 }
 .socialMedia img
 {
@@ -492,4 +512,157 @@ margin-bottom: -.5em;
     font-family: var(--secondaryFont);
     font-weight: 300;
     font-size: 1.2em;
+}
+/*----------- MEDIA QUERIES -----------*/
+/* Smartphones */
+@media (max-width: 768px) {
+    .nav {
+        margin: 0 auto; /* Centrará el nav horizontalmente */
+    }
+    .nav ul{
+        width: 90%;
+        margin: 0 auto;
+        padding-left: 4em;
+    }
+    .logo{
+        width: 10%;
+    }
+    .personalContainer {
+        display: block;
+        padding-top: 3em;
+    }
+    .personalData {
+        text-align: center;
+        padding-top: 1em;
+    }
+    .dataText {
+        padding-top: .5em;
+    }
+    #hello {
+        font-size: var(--fontSizeM);
+    }
+    #name {
+        font-size: var(--fontSizeL);
+    }
+    #programer {
+        font-size: var(--fontSizeS);
+    }
+    #dataP {
+        font-size: var(--fontSizeXS);
+    }
+    .personalImage img {
+        width: 50%;
+    }
+    .projectsContainer {
+        display: block;
+        width: 100%;
+        padding: 1em;
+        width: 80%;
+    }
+    .socialLinks 
+    {
+        margin: 0 auto;
+    }
+    .socialLinks a{
+        margin: 0 auto ;
+    }
+    .project
+    {
+        margin: 1em;
+    }
+    .Section4 {
+        display: block;
+    }
+    .lenguajes, .herramientas {
+        display: block;
+    }
+    .categoryBtn {
+        display: block;
+    }
+    .categoryBtn button {
+        margin: 1em auto;
+    }
+    .Section5 p {
+        padding: 0 2em;
+    }
+    .aboutContainer{
+        grid-template-columns: 1fr;
+    }
+    .aboutImage{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .aboutText{
+        text-align: center;
+    }
+    .contactContainer
+    {
+        grid-template-columns: 1fr;
+    }
+    .contactImage{
+        width: 60%;
+    }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .personalImage img {
+        width: 100%;
+    }
+    .Section3{
+        width: 100%;
+    }
+    .projectsContainer {
+        grid-template-columns: 1fr;
+    }
+    .Section4 {
+        display: block;
+    }
+    .lenguajes, .herramientas {
+        grid-template-columns: 1fr 1fr;
+    }
+    .Section5 p {
+        padding: 0 4em;
+    }
+     .contactContainer
+    {
+        grid-template-columns: 1fr;
+    }
+    .contactImage{
+        width: 60%;
+    }
+}
+
+/* Laptops */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .projectsContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+    .lenguajes, .herramientas {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Desktops */
+@media (min-width: 1441px) and (max-width: 2560px) {
+    .projectsContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 95%;
+    }
+    .lenguajes, .herramientas {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+/* TVs */
+@media (min-width: 2561px) {
+    .projectsContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .lenguajes, .herramientas {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .contactImage{
+        width: 30%;
+    }
 }
