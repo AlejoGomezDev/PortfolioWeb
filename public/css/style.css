@@ -532,14 +532,18 @@ main{
 @media (max-width: 768px) {
     .nav {
         margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
     }
     .nav ul{
-        width: 90%;
-        margin: 0 auto;
-        padding-left: 4em;
+        width: 100%;
+        justify-content: space-between;
     }
     .logo{
-        width: 10%;
+        margin: 0 auto;
+        text-align: center;
     }
     .personalContainer {
         display: block;
@@ -582,15 +586,23 @@ main{
     }
     .project
     {
-        width: 90%;
+        width: 100%;
         margin: 0 auto 1em;
+    }
+    .projectImage
+    {
+        height: 6em;
     }
     .Section4 {
         display: block;
+        margin-top: 2em;
     }
     .lenguajes, .herramientas {
         grid-template-columns: 1fr 1fr;
         padding: 0em;
+    }
+    .lenguaje{
+        font-size: .7em;
     }
     .categoryBtn {
         display: block;
@@ -610,6 +622,11 @@ main{
     }
     .aboutText{
         text-align: center;
+    }
+    .socialMedia
+    {
+        width: 90%;
+        margin: 1em auto 1em auto;
     }
     .contactContainer
     {
