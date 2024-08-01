@@ -576,8 +576,9 @@ main{
     }
     .projectsContainer {
         display: block;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
+        border: none;
     }
     .socialLinks 
     {
@@ -588,7 +589,7 @@ main{
     }
     .project
     {
-        width: 95%;
+        width: 90%;
         margin: 0 auto 1em auto;
     }
     .projectImage
