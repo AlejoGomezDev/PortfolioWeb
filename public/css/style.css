@@ -530,6 +530,10 @@ main{
 /*----------- MEDIA QUERIES -----------*/
 /* Smartphones */
 @media (max-width: 768px) {
+    header
+    {
+        height: 6em;
+    }
     .nav {
         margin: 0 auto;
         display: grid;
