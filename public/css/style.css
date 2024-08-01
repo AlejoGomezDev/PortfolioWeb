@@ -571,11 +571,13 @@ main{
     .personalImage img {
         width: 50%;
     }
+    .Section3{
+        width: 100%;
+    }
     .projectsContainer {
         display: block;
-        width: 100%;
-        padding: 1em;
         width: 80%;
+        margin: 0 auto;
     }
     .socialLinks 
     {
@@ -586,12 +588,12 @@ main{
     }
     .project
     {
-        width: 100%;
-        margin: 0 auto 1em;
+        width: 95%;
+        margin: 0 auto 1em auto;
     }
     .projectImage
     {
-        height: 6em;
+        height: 7em;
     }
     .Section4 {
         display: block;
@@ -601,7 +603,7 @@ main{
         grid-template-columns: 1fr 1fr;
         padding: 0em;
     }
-    .lenguaje{
+    .lenguaje,.herramienta{
         font-size: .7em;
     }
     .categoryBtn {
@@ -634,6 +636,9 @@ main{
     }
     .contactImage{
         width: 60%;
+    }
+    .socialMedia{
+        font-size: .7em;
     }
 }
 
