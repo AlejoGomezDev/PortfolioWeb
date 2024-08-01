@@ -54,6 +54,7 @@ header
     width: 100%;
     height: var(--headerHeight);
     position: fixed;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     z-index: 7;
 }
