@@ -1,10 +1,14 @@
 const express = require('express');
+const helmet = require('helmet');
 const path = require('path');
 const app = express();
 
 //parsear json y urlencode
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+//usa helmet para que elimine el cache 
+app.use(helmet.noCache());
 
 //Uso de archivos estaticos
 app.use(express.static(path.join(__dirname, '../public')));
