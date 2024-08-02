@@ -52,20 +52,21 @@ body
 header
 {
     width: 100%;
-    height: var(--headerHeight);
     position: fixed;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     z-index: 7;
+    transition: height 0.5s ease;
+    overflow: visible;
 }
 /*-----CONTAINER-----*/
 .nav
 {
     display: flex;
     width: 90%;
-    height: 100%;
     align-items: center;
     margin: 0 auto;
+    height: 100%;
 }
 /*-------LOGO--------*/
 .logo
@@ -84,9 +85,13 @@ header
     width: 60%;
     padding: 0;
     text-decoration: none;
-    height: 100%;
+    height: var(--headerHeight);
     margin: 0 0 0 auto;
     text-align: center;
+    transition: opacity 2s ease;
+}
+.nav ul.active {
+    opacity: 1;
 }
 .nav ul li
 {
@@ -96,7 +101,6 @@ header
     height: 100%;
     text-align: center;
     width: 100%;
-    
 }
 .nav ul li a {
     height: 100%;
@@ -105,16 +109,24 @@ header
     color: var(--primaryFontColor);
     display: inline-block;
     transition: color 0.4s;
-    align-content: center;
-    
+    align-content: center;  
 }
 
 .nav ul li:hover a{
     color: var(--emphasisFontColor);
 }
 
-.nav ul li:hover {
-    border-bottom: 0.1em solid var(--emphasisFontColor);
+.nav ul li:hover{
+    border-bottom: .01em solid var(--emphasisFontColor);
+}
+.hamburger {
+    display: none;
+    font-size: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primaryFontColor);
+    margin: 0 0 0 auto;
 }
 /*--------MAIN--------*/
 main{
@@ -447,7 +459,7 @@ main{
     display: inline-block;
     border: .01em solid var(--emphasisFontColor);
     /**/
-    background: linear-gradient(90deg, #000000, #0a504165 , #000000 );
+    background: linear-gradient(90deg, #00000000, #0a50413d , #00000000 );
     background-size: 800%;
     animation: gradiente 2s linear infinite;
 }
@@ -545,24 +557,36 @@ main{
 /*----------- MEDIA QUERIES -----------*/
 /* Smartphones */
 @media (max-width: 768px) {
-    header
-    {
-        height: 6em;
+    header{
+        overflow: hidden;
     }
-    .nav {
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+    .nav{
+        height: auto;
+    }
+    .nav ul {
+        display: none;
+        flex-direction: column;
         width: 100%;
+        position: absolute;
+        top: var(--headerHeight);
+        left: 0;
+        height: auto;
     }
-    .nav ul{
-        width: 100%;
-        justify-content: space-between;
+    
+    .nav ul.active {
+        display: flex;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
     }
-    .logo{
-        margin: 0 auto;
+
+    .nav ul li {
+        width: 30%;
+        margin: .5em auto .5em auto;
         text-align: center;
+    }
+
+    .hamburger {
+        display: block;
     }
     .personalContainer {
         display: block;

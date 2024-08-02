@@ -3,7 +3,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     e.preventDefault();
 
     const target = document.querySelector(this.getAttribute('href'));
-    const navbarHeight = document.querySelector('.nav').offsetHeight;
+    const navbarHeight = document.querySelector('header').offsetHeight;
     const offsetTop = target.offsetTop - navbarHeight;
 
     window.scrollTo({
@@ -43,3 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
     herramientasButton.classList.add('active');
   });
 });
+
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+  if (navLinks.classList.contains('active')) {
+    // Ajustar la altura del header para acomodar el menú desplegable
+    header.style.height = `calc(var(--headerHeight) + ${navLinks.scrollHeight}px)`;
+} else {
+    // Restaurar la altura original del header
+    header.style.height = 'var(--headerHeight)';
+}
+}
