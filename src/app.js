@@ -1,5 +1,4 @@
 const express = require('express');
-const helmet = require('helmet');
 const path = require('path');
 const app = express();
 
@@ -7,8 +6,13 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//usa helmet para que elimine el cache 
-app.use(helmet.noCache());
+//elimina el cache 
+app.use((req, res, next) => {
+    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
+    next();
+});
 
 //Uso de archivos estaticos
 app.use(express.static(path.join(__dirname, '../public')));
