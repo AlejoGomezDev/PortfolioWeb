@@ -124,7 +124,8 @@ main{
 .Section1
 {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 4em auto;
+
 }
 .personalContainer
 {
@@ -208,11 +209,13 @@ main{
 .buttonSocialMedia:hover {
     transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
 }
+
 /*-----SVG--------*/
 .Section2 {
     margin: 0;
     padding: 0;
     line-height: 0;
+
 }
 .Section2 svg {
     display: block;
@@ -226,8 +229,9 @@ main{
    color: var(--primaryFontColor);
    font-size: var(--fontSizeM); 
    text-align: center;
-   margin: 0;
+   margin: 0 auto;
    padding: 0;
+
 }
 #myprojects
 {
@@ -292,8 +296,9 @@ main{
     color: var(--primaryFontColor);
     font-size: var(--fontSizeM);  
     text-align: center;
-    margin-top: -2em;
-    height: 10em;
+    min-height: 15em;
+    height: auto;
+    margin: 0 auto 4em auto;
 }
 .skillContainer
 {
@@ -389,7 +394,7 @@ main{
     color: var(--primaryFontColor);
     font-size: var(--fontSizeM);
     width: 90%;
-    margin:8em auto 4em auto;
+    margin: 0 auto  6em auto;
 }
 #Section5 h2
 {
@@ -440,10 +445,19 @@ main{
     transition: .4s;
     text-decoration: none;
     display: inline-block;
+    border: .01em solid var(--emphasisFontColor);
+    /**/
+    background: linear-gradient(90deg, #000000, #0a504165 , #000000 );
+    background-size: 800%;
+    animation: gradiente 2s linear infinite;
+}
+@keyframes gradiente {
+    0% { background-position: 100% 0%; }
+    100% { background-position: 0%; }
 }
 .buttonCV:hover
 {
-    box-shadow: 0 0 0.3em var(--emphasisFontColor);
+    box-shadow: 0 0 0.5em var(--emphasisFontColor);
 }
 /*----CONTACTO----*/
 #Section6
@@ -451,8 +465,8 @@ main{
     color: var(--primaryFontColor);
     text-align: center;
     font-size: var(--fontSizeM);
-    margin: 0 auto;
     padding-bottom: 4em;
+    margin: 0 auto -3em auto;
 }
 #Section6 h2
 {
@@ -517,9 +531,9 @@ main{
 }
 .detalle
 {
-    color: #0bcaa1;
     cursor: pointer;
-
+    text-decoration: none;
+    color: var(--primaryFontColor);
 }
 /*---ARREGLO DE FONTS*/
 .zain
@@ -588,6 +602,11 @@ main{
     .socialLinks 
     {
         margin: 0 auto;
+        align-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        width: 100%;
     }
     .socialLinks a{
         margin: 0 auto ;
@@ -682,9 +701,8 @@ main{
     .projectsContainer {
         grid-template-columns: 1fr 1fr;
     }
-    .lenguajes, .herramientas {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+
+
 }
 
 /* Desktops */
@@ -693,9 +711,7 @@ main{
         grid-template-columns: 1fr 1fr 1fr;
         width: 95%;
     }
-    .lenguajes, .herramientas {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+
 }
 
 /* TV */
@@ -703,9 +719,7 @@ main{
     .projectsContainer {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    .lenguajes, .herramientas {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+
     .contactImage{
         width: 30%;
     }
