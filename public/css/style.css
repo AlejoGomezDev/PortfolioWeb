@@ -364,7 +364,7 @@ main{
 }
 .lenguaje:hover p, .herramienta:hover p
 {
-    margin-top: -1em;
+    transform : scale(1.07);
 }
 .lenguaje:hover,.herramienta:hover
 {

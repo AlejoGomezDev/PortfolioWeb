@@ -55,3 +55,8 @@ function toggleMenu() {
     header.style.height = 'var(--headerHeight)';
 }
 }
+document.addEventListener("DOMContentLoaded", function() {
+  var nameElement = document.getElementById("name");
+  var computedWidth = nameElement.scrollWidth + "px";
+  nameElement.style.width = computedWidth;
+});
