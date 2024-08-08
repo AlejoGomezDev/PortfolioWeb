@@ -177,7 +177,7 @@ main{
     border-right: 0.02em solid;
     white-space: nowrap;
     overflow: hidden; 
-    animation: typing 3s, cursor .4s step-end infinite alternate; 
+    animation: typing 4s, cursor .4s step-end infinite alternate; 
     display: inline-block;
 }
 
