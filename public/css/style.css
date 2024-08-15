@@ -159,6 +159,10 @@ main{
     margin: auto;
     text-align: center;
 }
+.personalImage img
+{
+    width: 80%;
+}
 .dataText
 {
     margin: 0 auto;
@@ -459,9 +463,9 @@ main{
     display: inline-block;
     border: .01em solid var(--emphasisFontColor);
     /**/
-    background: linear-gradient(90deg, #00000000, #0a50413d , #00000000 );
+    background: linear-gradient(90deg, #00000000, #0cbd9657 , #00000000 );
     background-size: 800%;
-    animation: gradiente 2s linear infinite;
+    animation: gradiente 3s linear infinite;
 }
 @keyframes gradiente {
     0% { background-position: 100% 0%; }
