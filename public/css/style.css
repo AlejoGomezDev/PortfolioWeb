@@ -144,30 +144,30 @@ main{
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
-
+    padding-top: 3em;
 }
 .personalData
 {
     width: 100%;
-    padding-top: 5em;
     text-wrap: balance;
     color: var(--primaryFontColor);
-}
-.personalImage
-{
-    width: 100%;
-    margin: auto;
-    text-align: center;
-}
-.personalImage img
-{
-    max-width: 80%;
-    width: auto;
-    padding-top: 8%;
+    margin: 0 auto;
 }
 .dataText
 {
     margin: 0 auto;
+   
+}
+.personalImage
+{
+    width: 100%;
+    display: flex;
+}
+.imagenPersonal
+{
+    max-width:70%;
+    width: 70%;
+    margin: auto;
 }
 .emphasis
 {
