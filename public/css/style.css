@@ -619,6 +619,9 @@ main{
     .personalImage img {
         width: 50%;
     }
+    .personalImage  {
+        margin-top: 3em;
+    }
     .Section3{
         width: 100%;
     }
