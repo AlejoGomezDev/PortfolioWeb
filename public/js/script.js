@@ -1,3 +1,5 @@
+import hamburguerMenu from "./menu-hamburguesa.js";
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -12,14 +14,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
-const flipCards = document.querySelectorAll('.flipCard');
-flipCards.forEach(card => {
-  card.addEventListener('click', function () {
-    this.classList.toggle('flip');
-  });
-});
 
 document.addEventListener('DOMContentLoaded', () => {
+  hamburguerMenu(".panel-btn",".panel", ".menu a");
+
   const lenguajesButton = document.querySelector('.languageBTN');
   const herramientasButton = document.querySelector('.ToolsBTN');
   const lenguajesDiv = document.querySelector('.lenguajes');
@@ -44,17 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function toggleMenu() {
-  const navLinks = document.querySelector('.nav-links');
-  navLinks.classList.toggle('active');
-  if (navLinks.classList.contains('active')) {
-    // Ajustar la altura del header para acomodar el menú desplegable
-    header.style.height = `calc(var(--headerHeight) + ${navLinks.scrollHeight}px)`;
-} else {
-    // Restaurar la altura original del header
-    header.style.height = 'var(--headerHeight)';
-}
-}
 document.addEventListener("DOMContentLoaded", function() {
   var nameElement = document.getElementById("name");
   var computedWidth = nameElement.scrollWidth + "px";

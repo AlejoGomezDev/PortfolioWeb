@@ -7,6 +7,8 @@
     /*-----------COLORS-----------*/
     /* Backgrounds */
     --mainBackgroundColor: #0F0F18;
+    --mainOpacityColor: #0f0f18e1;
+    --mainOpacity2Color: #0f0f18b6 ;
     --secondaryBackgroundColor:#171723 ;
     --opacityBackgroundColor: #171723c7;
     --projectBackgroundColor: #1b1b2b;
@@ -43,6 +45,9 @@
     /*-----BORDER RADIUS----------*/
     --border-radius: .4em;
 }
+html{
+    scroll-behavior: smooth;
+}
 body
 {
     font-family: var(--mainFont);
@@ -53,11 +58,69 @@ header
 {
     width: 100%;
     position: fixed;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    /*-webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);*/
     z-index: 7;
     transition: height 0.2s ease;
     overflow: visible;
+}
+/*----HAMBURGUESA----*/
+
+.panel-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1em;
+    right: 1em;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+    background-color: #0bcaa1c9  !important;
+}
+
+.panel{
+    position: fixed;
+    z-index: 997;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--mainOpacity2Color);
+    width: 100%;
+    transform: translate(0,-100%);
+    transition: transform .3s ease;
+}
+.panel.is-active{
+    transform: translate(0,0);
+}
+
+.menu{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.menu a{
+padding: 2rem;
+width: inherit;
+display: block;
+font-size: 1.5rem;
+text-decoration: none;
+color: white;
+transition: all .3s ease;
+}
+
+.menu a:hover{
+    font-weight: bold;
+    color: var(--emphasisFontColor);
+    background-color: var(--mainOpacityColor);
 }
 /*-----CONTAINER-----*/
 .nav
@@ -119,15 +182,7 @@ header
 .nav ul li:hover{
     border-bottom: .01em solid var(--emphasisFontColor);
 }
-.hamburger {
-    display: none;
-    font-size: 2em;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--primaryFontColor);
-    margin: 0 0 0 auto;
-}
+
 /*--------MAIN--------*/
 main{
     padding-top: var(--headerHeight);
@@ -557,41 +612,12 @@ main{
 /*----------- MEDIA QUERIES -----------*/
 /* Smartphones */
 @media (max-width: 768px) {
-    header{
-        overflow: hidden;
-        border-bottom: .01em solid var(--emphasisFontColor);
-    }
     .nav{
-        height: auto;
-    }
-    .nav ul {
         display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: var(--headerHeight);
-        left: 0;
-        height: auto;
-    }
-    
-    .nav ul.active {
-        display: flex;
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-    }
-
-    .nav ul li {
-        margin: .5em auto .5em auto;
-        text-align: center;
-    }
-    .nav ul li:hover
-    {
-        border-bottom: transparent;
-    }
-
-    .hamburger {
-        display: block;
-    }
+      }
+      .hamburguerContainer{
+         display: flex;
+      }
     .personalContainer {
         display: block;
         padding-top: 3em;
@@ -700,6 +726,13 @@ main{
 
 /* Tablets */
 @media (min-width: 769px) and (max-width: 1024px) {
+    .nav{
+        display: none;
+      }
+      .hamburguerContainer{
+         display: block;
+      }
+
     .personalImage img {
         width: 100%;
     }
@@ -732,8 +765,16 @@ main{
     .projectsContainer {
         grid-template-columns: 1fr 1fr;
     }
-
-
+    .panel-btn{
+        visibility: hidden;
+    }
+    .panel{
+        display: none;
+    }
+    header{
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
 }
 
 /* Desktops */
@@ -742,7 +783,16 @@ main{
         grid-template-columns: 1fr 1fr 1fr;
         width: 95%;
     }
-
+    .panel-btn{
+        visibility: hidden;
+    }
+    .panel{
+        display: none;
+    }
+    header{
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
 }
 
 /* TV */
@@ -753,5 +803,16 @@ main{
 
     .contactImage{
         width: 30%;
+    }
+
+    .panel-btn{
+        visibility: hidden;
+    }
+    .panel{
+        display: none;
+    }
+    header{
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
     }
 }
