@@ -27,7 +27,7 @@
 <body>
     <header id="header">
         <!--hamburguer menu-->
-            <button class="panel-btn hamburger hamburger--spin" type="button">
+            <button class="panel-btn hamburger hamburger--spin" type="button" onclick="hamburguerMenu()">
                 <span class="hamburger-box">
                   <span class="hamburger-inner"></span>
                 </span>
@@ -310,6 +310,26 @@
     <footer>
     </footer>
     <script src="../js/script.js" type="module"></script>
+    <script>
+        function hamburguerMenu() {
+          const d = document;
+          const $panelBtn = d.querySelector(".panel-btn");
+          const $panel = d.querySelector(".panel");
+          const $menuLinks = d.querySelectorAll(".menu a");
+    
+          // Toggle para mostrar/ocultar el panel de menú
+          $panel.classList.toggle("is-active");
+          $panelBtn.classList.toggle("is-active");
+    
+          // Cerrar el panel al hacer clic en un enlace del menú
+          $menuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+              $panel.classList.remove("is-active");
+              $panelBtn.classList.remove("is-active");
+            });
+          });
+        }
+      </script>
 </body>
 
 </html>

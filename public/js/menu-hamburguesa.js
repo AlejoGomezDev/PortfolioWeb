@@ -1,16 +1,16 @@
-export default function hamburguerMenu(panelBtn, panel, menuLink) {
+export default function hamburguerMenu() {
     const d = document;
-  
-    d.addEventListener("touchstart", (e) => {
-      if (e.target.matches(panelBtn) || e.target.closest(panelBtn)) {
-        d.querySelector(panel).classList.toggle("is-active");
-        d.querySelector(panelBtn).classList.toggle("is-active");
-      }
-      if (e.target.matches(menuLink)) {
-        console.log(e.target);
-        d.querySelector(panel).classList.remove("is-active");
-        d.querySelector(panelBtn).classList.remove("is-active");
-      }
+    const $panelBtn = d.querySelector(".panel-btn");
+    const $panel = d.querySelector(".panel");
+    const $menuLinks = d.querySelectorAll(".menu a");
+
+    $panel.classList.toggle("is-active");
+    $panelBtn.classList.toggle("is-active");
+
+    $menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        $panel.classList.remove("is-active");
+        $panelBtn.classList.remove("is-active");
+      });
     });
   }
-  

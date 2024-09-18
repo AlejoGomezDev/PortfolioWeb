@@ -16,7 +16,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  hamburguerMenu(".panel-btn",".panel", ".menu a");
+  hamburguerMenu();
 
   const lenguajesButton = document.querySelector('.languageBTN');
   const herramientasButton = document.querySelector('.ToolsBTN');
