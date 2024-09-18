@@ -1,10 +1,15 @@
  export default function hamburguerMenu(panelBtn, panel, menuLink){
     const d = document;
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-    const eventType = isTouchDevice ? "touchstart" : "click";
+    d.addEventListener("click", (e) => {
+        handleMenuEvent(e);
+    });
     
-    d.addEventListener(eventType, (e) => {
+    d.addEventListener("touchstart", (e) => {
+        handleMenuEvent(e);
+        console.log("touchstart event fired");
+    });
+    
+    function handleMenuEvent(e) {
         if(e.target.matches(panelBtn) || e.target.matches(`${panelBtn} *`)) {
             d.querySelector(panel).classList.toggle("is-active");
             d.querySelector(panelBtn).classList.toggle("is-active");
@@ -13,6 +18,6 @@
             d.querySelector(panel).classList.remove("is-active");
             d.querySelector(panelBtn).classList.remove("is-active");
         }
-    });
+    }
     
  }

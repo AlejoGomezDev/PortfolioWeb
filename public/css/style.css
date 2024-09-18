@@ -50,6 +50,7 @@ html{
 }
 body
 {
+    touch-action: manipulation;
     font-family: var(--mainFont);
     background: rgb(15,15,24);
     background: linear-gradient(90deg, rgba(15,15,24,1) 0%, rgba(20,19,42,1) 25%, rgba(16,16,40,1) 50%, rgba(20,19,42,1) 75%, rgba(15,15,24,1) 100%);
