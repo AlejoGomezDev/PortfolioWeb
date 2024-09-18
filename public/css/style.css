@@ -120,8 +120,8 @@ transition: all .3s ease;
 
 .menu a:hover{
     font-weight: bold;
-    color: var(--emphasisFontColor);
-    background-color: var(--mainOpacityColor);
+    color: var(--buttonBackgroundColor);
+    background-color: var(--darkEmphasisColor);
 }
 /*-----CONTAINER-----*/
 .nav

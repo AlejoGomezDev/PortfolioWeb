@@ -1,5 +1,3 @@
-import hamburguerMenu from "./menu-hamburguesa.js";
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -16,8 +14,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  hamburguerMenu();
-
   const lenguajesButton = document.querySelector('.languageBTN');
   const herramientasButton = document.querySelector('.ToolsBTN');
   const lenguajesDiv = document.querySelector('.lenguajes');

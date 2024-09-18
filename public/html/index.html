@@ -317,11 +317,9 @@
           const $panel = d.querySelector(".panel");
           const $menuLinks = d.querySelectorAll(".menu a");
     
-          // Toggle para mostrar/ocultar el panel de menú
           $panel.classList.toggle("is-active");
           $panelBtn.classList.toggle("is-active");
-    
-          // Cerrar el panel al hacer clic en un enlace del menú
+
           $menuLinks.forEach(link => {
             link.addEventListener("click", () => {
               $panel.classList.remove("is-active");
