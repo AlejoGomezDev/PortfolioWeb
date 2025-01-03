@@ -635,13 +635,32 @@ main{
 }
 /*----------- MEDIA QUERIES -----------*/
 /* Smartphones */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+    .project {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        height: auto;
+    }
+
+    .projectImageDiv {
+        text-align: center;
+    }
+
+    .projectImage {
+        max-width: 100%;
+        height: auto; 
+    }
+
+    .projectData {
+        text-align: justify; 
+    }
     .nav{
         display: none;
       }
       .hamburguerContainer{
          display: flex;
       }
+      
     .personalContainer {
         display: block;
         padding-top: 3em;
@@ -674,12 +693,6 @@ main{
     .Section3{
         width: 100%;
     }
-    .projectsContainer {
-        display: block;
-        width: 90%;
-        margin: 0 auto;
-        border: none;
-    }
     .socialLinks 
     {
         margin: 0 auto;
@@ -691,15 +704,6 @@ main{
     }
     .socialLinks a{
         margin: 0 auto ;
-    }
-    .project
-    {
-        width: 90%;
-        margin: 0 auto 1em auto;
-    }
-    .projectImage
-    {
-        height: 7em;
     }
     .Section4 {
         display: block;
@@ -763,9 +767,7 @@ main{
     .Section3{
         width: 100%;
     }
-    .projectsContainer {
-        grid-template-columns: 1fr;
-    }
+
     .Section4 {
         display: block;
     }
@@ -801,9 +803,21 @@ main{
 
 /* Desktops */
 @media (min-width: 1441px) and (max-width: 2560px) {
-    .projectsContainer {
-        grid-template-columns: 1fr 1fr 1fr;
-        width: 95%;
+    .project {
+        grid-template-columns: 40% auto; 
+        height: 10em;
+    }
+
+    .projectImageDiv {
+        max-width: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .projectImage {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
     }
     .panel-btn{
         visibility: hidden;
@@ -815,18 +829,15 @@ main{
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
     }
+
 }
 
 /* TV */
 @media (min-width: 2561px) {
-    .projectsContainer {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
 
     .contactImage{
         width: 30%;
     }
-
     .panel-btn{
         visibility: hidden;
     }
