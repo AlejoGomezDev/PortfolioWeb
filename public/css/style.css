@@ -346,14 +346,14 @@ main{
     grid-template-rows: 1fr;
     height: 10em;
     grid-gap: .8em;
+    text-decoration: none;
+    color: var(--primaryFontColor);
 }
+
 .project:hover
 {
     scale: 1.02;
     filter: brightness(110%);
-    box-shadow: 0 0 0.2em var(--emphasisFontColor);
-}
-.projectImage:hover{
     box-shadow: 0 0 0.2em var(--emphasisFontColor);
 }
 .projectImage
