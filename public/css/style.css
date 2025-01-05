@@ -643,12 +643,12 @@ main{
 /*----------- MEDIA QUERIES -----------*/
 /* Smartphones */
 @media (max-width: 1000px) {
+
     .project {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         height: auto;
     }
-
     .projectImageDiv {
         text-align: center;
     }
@@ -671,10 +671,12 @@ main{
     .personalContainer {
         display: block;
         padding-top: 3em;
+        align-items: center;
     }
     .personalData {
         text-align: center;
         padding-top: 1em;
+        margin: 0 auto;
     }
     .dataText {
         padding-top: .5em;
@@ -693,6 +695,7 @@ main{
     }
     .personalImage img {
         width: 50%;
+        margin: 0 auto;
     }
     .personalImage  {
         margin-top: 3em;
