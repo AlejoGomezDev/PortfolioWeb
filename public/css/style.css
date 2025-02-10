@@ -828,6 +828,16 @@ main{
     .socialMedia{
         font-size: .7em;
     }
+    .formContainer{
+        width: 90%;
+    }
+    #contact-form{
+        width: 90%;
+        font-size: x-small;
+    }
+    #contact-form input#submit{
+        width: 40%;
+    }
 }
 
 /* Tablets */
