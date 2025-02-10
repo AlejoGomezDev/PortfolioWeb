@@ -620,7 +620,7 @@ main{
 { 
     align-content: left; 
     text-align: left;
-    margin: .09em 0 0 .5em;
+    margin: auto auto auto 1em;
     font-size: var(--fontSizeP);
 }
 .socialMedia a
@@ -632,6 +632,74 @@ main{
     cursor: pointer;
     text-decoration: none;
     color: var(--primaryFontColor);
+}
+
+.contact-form-error.none,.contact-form-response.none{
+    display: none;
+}
+.formContainer{
+    width: 70%;
+    margin: 1em auto 4em auto;
+    border: 0.01em solid var(--terciaryColor);
+    border-radius: var(--border-radius);
+    height: auto;
+    background-color: var(--buttonBackgroundColor);
+    padding: 1em 0 0 0;
+}
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 1em auto 0 auto;
+    box-sizing: border-box;
+}
+#contact-form input{
+    
+    border: 0.01em solid var(--terciaryColor);
+    border-radius: var(--border-radius);
+    margin: 1em auto;
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: medium;
+}
+#contact-form input#submit{
+    width: 20%;
+    background-color: var(--projectBackgroundColor);
+    color: var(--primaryFontColor);
+    cursor: pointer;
+    transition: .4s;
+    text-decoration: none;
+    display: inline-block;
+    border: .01em solid var(--emphasisFontColor);
+    /**/
+    background: linear-gradient(90deg, #00000000, #0cbd9657 , #00000000 );
+    background-size: 800%;
+    animation: gradiente 3s linear infinite;
+}
+#contact-form input#submit:hover
+{
+    box-shadow: 0 0 .8em var(--emphasisFontColor);
+}
+.contact-form-error{
+    background-color: rgb(151, 79, 79);
+    border: 0.1em solid rgb(100, 29, 29);
+    border-radius: var(--border-radius);
+    padding: .3em;
+    width: auto;
+    margin: 0 auto;
+    font-size: large;
+    font-weight: 100;
+}
+.contact-form-response{
+    font-size: x-large;
+    font-weight: 100;
+    margin-bottom: -1em;
+    padding-bottom: 0;
+}
+#submit.disabled{
+    pointer-events: none;
+    filter: grayscale(100%);
 }
 /*---ARREGLO DE FONTS*/
 .zain

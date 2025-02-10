@@ -313,6 +313,7 @@
         <!----CONTACTO---->
         <section id="Section6">
             <h2>Contacto</h2>
+            <!-- REDES -->
             <div class="contactContainer zain">
                 <div class="socialMediaContainer">
 
@@ -331,11 +332,11 @@
                     </div>
                 </a>
 
-                <a href="https://github.com/KaliWick" target="_blank"
+                <a href="https://github.com/AlejoGomezDev" target="_blank"
                                 class="detalle">
                     <div class="socialMedia">
                         <img src="../images/skills/github.png" alt="" class="GitHub">
-                        <div class="socialMediaText">GitHub: <span class="emphasis">KaliWick</span></div>
+                        <div class="socialMediaText">GitHub: <span class="emphasis">AlejoGomezDev</span></div>
                     </div>
                 </a>
 
@@ -352,6 +353,24 @@
                     </div>
                 </div>
                 <img src="../images/contact/contactoImg.png" alt="" class="contactImage">
+            </div>
+            <!-- FORM -->
+            <div class="formContainer">
+                <h3>Envíame un <span class="emphasis">mail</span></h3>
+                  <form id="contact-form">
+                    <input type="text" name="nombre" id="nombre" placeholder="Escribe tu Nombre (Letras y espacios blancos)" title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                    <input type="text" name="email" id="email" placeholder="Escribe tu Email (ejemplo@TuEmail.com)" title="Email invalido" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                    <input type="text" name="asunto" id="asunto" placeholder="Escribe el Asunto">
+                    <input type="text" name="mensaje" id="mensaje" placeholder="Escribe tu Mensaje (Máx. 255 Caracteres)" pattern="^.{1,255}$" required>
+                    <div class="contact-form-error none ">
+                        <p>Asegurate de introducir los datos de forma correcta</p>
+                    </div>
+                    <input type="submit" name="submit" id="submit" value="Enviar">
+                </form>
+                <div class="contact-form-response none">
+                    <p>¡El mensaje ha sido enviado!</p>
+                </div>
+                <br>
             </div>
         </section>
         <section class="Section2">
